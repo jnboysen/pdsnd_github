@@ -136,6 +136,9 @@ most_popular_stations=pd.DataFrame(filtered_df.groupby(by=["Start Station"]).siz
 least_popular_stations=pd.DataFrame(filtered_df.groupby(by=["Start Station"]).size().nsmallest(5))
 
 #Distribution of riders by Gender. Age & Gender data not available for Washington.
+'''For the Chicago and New York, group and count by gender, then calculate the percent of total
+ignoring NULL values. The if statement is used to exlcude washington because Gender and Birth Year
+were not collected from riders in that city'''
 if filters[0] == 'washington':
     gender_group="***** Birth Year / Age demographic data not available for Washington *******"
 else:

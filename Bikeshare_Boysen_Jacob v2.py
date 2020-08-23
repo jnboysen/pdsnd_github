@@ -64,8 +64,9 @@ def get_filters():
     return input_city, input_month, input_day
 
 ############ SELECT CSV FROM DICTIONARY ################
-""" This block organizes the 3 CSV files in a dictionary and then then creatds a DataFrame
-based on the the users selection.
+""" This block organizes the 3 CSV files in a dictionary and then then creatds a Dataframe
+based on the the users selection.  The city filter is changed to lower case to handle potential
+variations from the users.
 """
 filters=get_filters()
 #print(filters[0])

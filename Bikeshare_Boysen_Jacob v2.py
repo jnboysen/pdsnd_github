@@ -124,6 +124,7 @@ else: filtered_df=filtered_df[(filtered_df['day_of_week'].str.lower() == filters
 ############ BUILD STATISTICS FROM SELECTED DATAFRAME ################
 
 #Average trip duration
+"""The mean of Trip Duration field in the filtered dataframe. Mean() automatically ignores NULL records"""
 avg_trip_duration=round(filtered_df['Trip Duration'].mean(),2)
 
 #Most popular stations
